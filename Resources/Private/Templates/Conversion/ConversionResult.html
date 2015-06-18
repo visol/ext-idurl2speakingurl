@@ -1,0 +1,14 @@
+<f:layout name="Default" />
+
+<f:section name="Content">
+	<h2>Converted URLs</h2>
+	<pre><f:render partial="Format{targetFormat}" arguments="{_all}" /></pre>
+	<f:if condition="errors">
+		<h2>The following URLs could not be generated:</h2>
+		<ul>
+			<f:for each="{errors}" as="error">
+				<li>{error}</li>
+			</f:for>
+		</ul>
+	</f:if>
+</f:section>

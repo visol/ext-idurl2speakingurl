@@ -1,0 +1,19 @@
+<f:layout name="Default" />
+
+<f:section name="Content">
+	<h2>Convert URLs</h2>
+	<p>
+		Paste a list of URLs, separated by newline, with URLs like
+	</p>
+	<pre>http://www.mydomain.tld/index.php?id=999<br />http://www.mydomain.tld/?id=999</pre>
+	<p>
+		If the pages are accessible and TYPO3 is properly configured to generate speaking links to these pages (RealURL, multi-domain etc.),
+		this module will output speaking URLs for all URLs provided.
+	</p>
+	<f:form action="conversionResult" noCacheHash="true">
+		<f:form.textarea style="width: 100%; max-width: 600px; height: 300px;" name="urlList" /><br />
+		<label for="targetFormat">Rewrite format</label>
+		<f:form.select name="targetFormat" id="targetFormat" options="{0: 'Only return speaking URLs', 1: 'nginx', 2: 'Apache'}" /><br />
+		<f:form.submit name="submit" value="Convert URLs" />
+	</f:form>
+</f:section>

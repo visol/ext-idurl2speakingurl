@@ -1,0 +1,7 @@
+plugin.tx_idurl2speakingurl {
+	view {
+		templateRootPath = EXT:idurl2speakingurl/Resources/Private/Templates/
+		partialRootPath = EXT:idurl2speakingurl/Resources/Private/Partials/
+		layoutRootPath = EXT:idurl2speakingurl/Resources/Private/Layouts/
+	}
+}
